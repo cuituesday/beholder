@@ -177,6 +177,7 @@ class Beholder(object):
                         host = new_server
                         port = new_port
                         proxy_data[proxy]['servers'][i]= host + ':' + str(port) + ':' + str(number) + ' ' + name
+                        proxy_data[proxy]['servers'][i]= proxy_data[proxy]['servers'][i].strip()
                         self._logger.info('%s -> %s:%s changed to %s:%s' % (name, old_server, old_port, host, port))
                         b_updated = True
 
